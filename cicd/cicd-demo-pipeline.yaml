@@ -138,7 +138,7 @@ parameters:
   value: 3scale-toolbox
   required: true  
 - name: TARGET_INSTANCE_DEV
-  value: quitalaDEV
+  value: quitala
   required: true  
 - name: TARGET_INSTANCE_TEST
   value: quitalatest
@@ -166,5 +166,8 @@ parameters:
   required: true
   value: "quay.io/redhat/3scale-toolbox:v0.18.3"
 - name: ENDPOINT2TEST
+  required: true
+  value: "/api/health"  
+- name: PRODUCT_FILE
   required: true
   value: "/api/health"  

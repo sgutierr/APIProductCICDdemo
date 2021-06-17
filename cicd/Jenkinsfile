@@ -25,7 +25,7 @@ node() {
 
     // create the ThreescaleService object from your API metadata manifest:
     service = toolbox.prepareThreescaleProduct(
-        product: [productfile: "cicd/MyDemoProduct.yml"],
+        product: [productfile: "cicd/APIProduct.yaml"],
         environment: [ baseSystemName: params.API_BASE_SYSTEM_NAME,
                        publicBasePath: "/open-data/",
 					   privateBaseUrl: backend_service,

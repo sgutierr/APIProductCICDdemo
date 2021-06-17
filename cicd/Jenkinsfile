@@ -29,8 +29,6 @@ node() {
         environment: [ baseSystemName: params.API_BASE_SYSTEM_NAME,
                        publicBasePath: "/open-data/",
 					   privateBaseUrl: "http://s1-appdev-integration.apps.ocp4.quitala.eu:80/services/s1",
-					   stagingPublicBaseURL: stagingPublicBaseURL,
-					   productionPublicBaseURL: productionPublicBaseURL,
 					   environmentName:  envName ],
         toolbox: [ openshiftProject: params.NAMESPACE,
                    destination: params.TARGET_INSTANCE_DEV,

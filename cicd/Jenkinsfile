@@ -20,7 +20,12 @@ node() {
   stage('Checkout Source') {
     checkout scm
   }
-
+    def envName = params.TEST_PROJECT
+    def app_name= params.APPLICATION_NAME
+    def backend_service = params.DEV_PRIVATE_BASE_URL
+    def stagingPublicBaseURL = params.DEV_STAGING_PUBLIC_BASE_URL
+    def productionPublicBaseURL = params.DEV_PRODUCTION_PUBLIC_BASE_URL
+	
   stage("Deploy API in Dev") {
 
     // create the ThreescaleService object from your API metadata manifest:

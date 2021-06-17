@@ -41,12 +41,8 @@ node() {
                    insecure: params.DISABLE_TLS_VALIDATION == "yes",
                    secretName: params.SECRET_NAME],
         service: [:],
-        applications: [
-            [ name: "my-test-app", description: "This is used for tests", plan: "sandbox", account: params.DEV_DEVELOPER_ACCOUNT_ID ]
-        ],
-        applicationPlans: [
-          [ systemName: "sandbox", name: "Sandbox", defaultPlan: false, published: true, artefactFile: "https://raw.githubusercontent.com/sgutierr/3scaledemo/master/cicd/sandbox-app-plan.yaml" ]          
-	]
+        applications: [[:]],
+        applicationPlans: [[:]]
     )
 
     // Import Product

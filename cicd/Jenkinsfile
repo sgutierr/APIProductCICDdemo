@@ -60,7 +60,7 @@ node() {
     //runIntegrationTests(service)
     
     // Promote to production
-    service.promoteToProduction()	  
+    // service.promoteToProduction()	  
 
  
   }
@@ -96,7 +96,7 @@ stage("Deploy API in TEST") {
     //runIntegrationTests(service)
     
     // Promote to production
-    service.promoteToProduction()	  
+    // service.promoteToProduction()	  
 
  
   }	

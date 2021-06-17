@@ -11,7 +11,7 @@ items:
     name: unittaorganizattive.zhynviqf
   spec:
     name: UnittaOrganizzative
-    systemName: unittaorganizattive
+    systemName: unittaorganizattive2
     description: ''
     mappingRules:
     - httpMethod: POST

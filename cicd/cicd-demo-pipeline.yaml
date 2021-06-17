@@ -84,7 +84,9 @@ objects:
         - name: TOOLBOX_IMAGE_REGISTRY
           value: ${TOOLBOX_IMAGE_REGISTRY}
         - name: ENDPOINT2TEST
-          value: ${ENDPOINT2TEST}          
+          value: ${ENDPOINT2TEST}
+        - name: PRODUCT_FILE
+          value: ${PRODUCT_FILE}           
 parameters:
 - name: GIT_REPO
   value: https://github.com/sgutierr/APIProductCICDdemo.git
@@ -169,5 +171,5 @@ parameters:
   required: true
   value: "/api/health"  
 - name: PRODUCT_FILE
-  required: true
+  required: false
   value: "/api/health"  

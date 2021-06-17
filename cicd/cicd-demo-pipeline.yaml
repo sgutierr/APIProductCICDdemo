@@ -163,7 +163,7 @@ parameters:
   value: "openbanking-api"
   required: true
 - name: OPENAPI_SPECIFICATION_FILE
-  required: true
+  required: false
 - name: TOOLBOX_IMAGE_REGISTRY
   required: true
   value: "quay.io/redhat/3scale-toolbox:v0.18.3"

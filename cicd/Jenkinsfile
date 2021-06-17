@@ -22,6 +22,7 @@ node() {
   }
     def envName = params.TEST_PROJECT
     def app_name= params.APPLICATION_NAME
+    def product_file= params.PRODUCT_FILE
     def backend_service = params.DEV_PRIVATE_BASE_URL
     def stagingPublicBaseURL = params.DEV_STAGING_PUBLIC_BASE_URL
     def productionPublicBaseURL = params.DEV_PRODUCTION_PUBLIC_BASE_URL
@@ -30,7 +31,7 @@ node() {
 
     // create the ThreescaleService object from your API metadata manifest:
     service = toolbox.prepareThreescaleProduct(
-        product: [productfile: "cicd/APIProduct.yaml"],
+        product: [productfile: product_file],
         environment: [ baseSystemName: params.API_BASE_SYSTEM_NAME,
                        publicBasePath: "/open-data/",
 					   privateBaseUrl: "http://s1-appdev-integration.apps.ocp4.quitala.eu:80/services/s1",

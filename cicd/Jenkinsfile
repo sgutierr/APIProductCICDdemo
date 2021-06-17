@@ -20,7 +20,7 @@ node() {
   stage('Checkout Source') {
     checkout scm
   }
-    def envName = params.TEST_PROJECT
+    def envName = params.DEV_PROJECT
     def app_name= params.APPLICATION_NAME
     def product_file= params.PRODUCT_FILE
     def backend_service = params.DEV_PRIVATE_BASE_URL
@@ -52,6 +52,30 @@ node() {
 
  
   }
+	
+stage("Deploy API in TEST") {
+     
+    envName = params.TEST_PROJECT	
+    // create the ThreescaleService object from your API metadata manifest:
+    service = toolbox.prepareThreescaleProduct(
+        product: [productfile: product_file],
+        environment: [ baseSystemName: params.API_BASE_SYSTEM_NAME, environmentName:  envName ],
+        toolbox: [ openshiftProject: params.NAMESPACE,
+                   destination: params.TARGET_INSTANCE_TEST,
+                   image: params.TOOLBOX_IMAGE_REGISTRY,
+                   insecure: params.DISABLE_TLS_VALIDATION == "yes",
+                   secretName: params.SECRET_NAME],
+        service: [:],
+        applications: [[:]],
+        applicationPlans: [[:]]
+    )
+
+    // Import Product
+    service.importProduct()
+    echo "Service with system_name ${service.environment.targetSystemName} created !"
+
+ 
+  }	
 
  
 }

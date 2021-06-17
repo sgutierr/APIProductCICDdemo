@@ -50,6 +50,18 @@ node() {
     service.importProduct()
     echo "Service with system_name ${service.environment.targetSystemName} created !"
 
+     // Create an Application
+    //service.applyApplication()
+	
+    // Wait for saving setup	  
+    //sleep(time:10,unit:"SECONDS")
+
+    // Run integration tests
+    //runIntegrationTests(service)
+    
+    // Promote to production
+    service.promoteToProduction()	  
+
  
   }
 	
@@ -73,6 +85,18 @@ stage("Deploy API in TEST") {
     // Import Product
     service.importProduct()
     echo "Service with system_name ${service.environment.targetSystemName} created !"
+
+    // Create an Application
+    //service.applyApplication()
+	
+    // Wait for saving setup	  
+    //sleep(time:10,unit:"SECONDS")
+
+    // Run integration tests
+    //runIntegrationTests(service)
+    
+    // Promote to production
+    service.promoteToProduction()	  
 
  
   }	

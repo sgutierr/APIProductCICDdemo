@@ -28,7 +28,7 @@ node() {
         product: [productfile: "cicd/APIProduct.yaml"],
         environment: [ baseSystemName: params.API_BASE_SYSTEM_NAME,
                        publicBasePath: "/open-data/",
-					   privateBaseUrl: backend_service,
+					   privateBaseUrl: "http://s1-appdev-integration.apps.ocp4.quitala.eu:80/services/s1",
 					   stagingPublicBaseURL: stagingPublicBaseURL,
 					   productionPublicBaseURL: productionPublicBaseURL,
 					   environmentName:  envName ],

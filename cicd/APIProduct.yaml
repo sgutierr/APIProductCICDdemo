@@ -10,8 +10,8 @@ items:
       3scale_toolbox_version: 0.18.0
     name: unittaorganizattive.zhynviqf
   spec:
-    name: UnittaOrganizzative
-    systemName: unittaorganizattive2
+    name: UnittaOrganizzativeSOAP
+    systemName: unittaorganizattive5
     description: ''
     mappingRules:
     - httpMethod: POST
